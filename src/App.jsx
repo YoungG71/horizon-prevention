@@ -84,9 +84,9 @@ function App() {
           <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             Nous formons les professionnels des établissements éducatifs et du secteur du handicap à gérer les situations complexes avec sérénité et compétence.
           </p>
-          <Link to="contact-section" smooth={true} duration={500} className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-lg">
+          <a href="mailto:contact@horizon-prevention.fr" className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-lg">
             Demander un devis personnalisé
-          </Link>
+          </a>
         </div>
         <div className="absolute inset-0 bg-black opacity-20"></div> {/* Overlay for better text readability */}
       </section>

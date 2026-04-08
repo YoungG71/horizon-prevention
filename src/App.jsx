@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import { ShieldAlert, Heart, Accessibility, Phone, Mail, Menu, X } from 'lucide-react'; // Using Lucide-react as initially requested, FontAwesome was for CDN only
+import { ShieldAlert, Heart, Accessibility, Phone, Mail, Menu, X, FileText } from 'lucide-react'; // Using Lucide-react as initially requested, FontAwesome was for CDN only
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,6 +86,10 @@ function App() {
           </p>
           <a href="mailto:contact@horizon-prevention.fr" className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-lg">
             Demander un devis personnalisé
+          </a>
+          <a href="/horizon-prevention.pdf" target="_blank" rel="noopener noreferrer" className="bg-bleu-marine text-white border border-white font-bold py-3 px-8 rounded-full hover:bg-vert-eau hover:text-bleu-marine active:scale-95 transition-transform duration-100 cursor-pointer text-lg flex items-center justify-center space-x-2 mt-4 md:mt-0 md:ml-4">
+            <FileText size={20} />
+            <span>Découvrir nos formations (PDF)</span>
           </a>
         </div>
         <div className="absolute inset-0 bg-black opacity-20"></div> {/* Overlay for better text readability */}
@@ -271,6 +275,17 @@ function App() {
           <p className="text-lg max-w-3xl mx-auto">
             Horizon Prévention est votre partenaire expert en formation professionnelle, dédié à l'amélioration du climat social et du bien-être en entreprise, notamment dans le secteur médico-social et les ESSMS. Forts de notre expérience, nous proposons des formations concrètes et impactantes pour développer les compétences de vos équipes et créer un environnement de travail sain et productif. Nous intervenons en tant qu'intervenant spécialisé dans toute la région Bourgogne-Franche-Comté.
           </p>
+        </div>
+      </section>
+
+      {/* Section Téléchargement Brochure */}
+      <section className="py-16 bg-gris-perle text-center">
+        <div className="container mx-auto px-4">
+          <p className="text-xl mb-8 text-bleu-marine">Besoin de plus d’informations sur nos formations ? Téléchargez notre brochure complète.</p>
+          <a href="/horizon-prevention.pdf" target="_blank" rel="noopener noreferrer" className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-bleu-marine hover:text-white active:scale-95 transition-transform duration-100 cursor-pointer text-lg flex items-center justify-center space-x-2 mx-auto w-fit">
+            <FileText size={20} />
+            <span>Télécharger la brochure (PDF)</span>
+          </a>
         </div>
       </section>
 

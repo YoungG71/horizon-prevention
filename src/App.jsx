@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import { ShieldAlert, Heart, Accessibility, Phone, Mail } from 'lucide-react'; // Using Lucide-react as initially requested, FontAwesome was for CDN only
+import { ShieldAlert, Heart, Accessibility, Phone, Mail, Menu, X } from 'lucide-react'; // Using Lucide-react as initially requested, FontAwesome was for CDN only
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="font-sans antialiased text-gray-800">
       {/* Header */}
@@ -12,7 +18,7 @@ function App() {
             <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-10 mr-4" />
             <div className="text-2xl font-bold">Horizon Prévention</div>
           </div>
-          <div className="flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6">
             <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
               <Phone size={18} />
               <span>07 43 35 84 41</span>
@@ -22,13 +28,41 @@ function App() {
               <span>contact@horizon-prevention.fr</span>
             </a>
           </div>
-          <ul className="flex space-x-6">
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="text-white focus:outline-none">
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+          <ul className="hidden md:flex space-x-6">
             <li><Link to="hero" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Accueil</Link></li>
             <li><Link to="formations" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Formations</Link></li>
             <li><Link to="domaines-intervention" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Domaines</Link></li>
             <li><Link to="about" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">À propos</Link></li>
           </ul>
         </nav>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-bleu-marine absolute top-16 left-0 w-full py-4 shadow-lg">
+            <ul className="flex flex-col items-center space-y-4">
+              <li><Link to="hero" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Accueil</Link></li>
+              <li><Link to="formations" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Formations</Link></li>
+              <li><Link to="domaines-intervention" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Domaines</Link></li>
+              <li><Link to="about" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">À propos</Link></li>
+              <li>
+                <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
+                  <Phone size={18} />
+                  <span>07 43 35 84 41</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@horizon-prevention.fr" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
+                  <Mail size={18} />
+                  <span>contact@horizon-prevention.fr</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}

@@ -84,13 +84,15 @@ function App() {
           <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             Nous formons les professionnels des établissements éducatifs et du secteur du handicap à gérer les situations complexes avec sérénité et compétence.
           </p>
-          <a href="mailto:contact@horizon-prevention.fr" className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-lg">
-            Demander un devis personnalisé
-          </a>
-          <a href="/horizon-prevention.pdf" target="_blank" rel="noopener noreferrer" className="bg-bleu-marine text-white border border-white font-bold py-3 px-8 rounded-full hover:bg-vert-eau hover:text-bleu-marine active:scale-95 transition-transform duration-100 cursor-pointer text-lg flex items-center justify-center space-x-2 mt-4 md:mt-0 md:ml-4">
-            <FileText size={20} />
-            <span>Découvrir nos formations (PDF)</span>
-          </a>
+          <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
+            <a href="mailto:contact@horizon-prevention.fr" className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-lg">
+              Demander un devis personnalisé
+            </a>
+            <a href="/horizon-prevention.pdf" target="_blank" rel="noopener noreferrer" className="bg-bleu-marine text-white border border-white font-bold py-3 px-8 rounded-full hover:bg-vert-eau hover:text-bleu-marine active:scale-95 transition-transform duration-100 cursor-pointer text-lg flex items-center justify-center space-x-2">
+              <FileText size={20} />
+              <span>Découvrir nos formations (PDF)</span>
+            </a>
+          </div>
         </div>
         <div className="absolute inset-0 bg-black opacity-20"></div> {/* Overlay for better text readability */}
       </section>

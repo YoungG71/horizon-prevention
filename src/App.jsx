@@ -84,12 +84,12 @@ function App() {
           <p className="text-xl text-center mb-12 text-gray-600">Des solutions concrètes pour un environnement de travail serein et inclusif.</p>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Formation 1: Gestion de la violence */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center">
-              <div className="bg-gris-perle p-4 rounded-full mb-6">
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+              <div className="bg-gris-perle p-4 rounded-full mb-6 mx-auto">
                 <ShieldAlert size={48} className="text-bleu-marine" />
               </div>
               <h3 className="text-2xl font-extrabold mb-4 text-bleu-marine">Gestion de la violence (6h, possibilité 3h)</h3>
-              <ul className="list-disc list-inside text-left space-y-2 text-gray-700">
+              <ul className="list-disc list-inside text-left space-y-2 text-gray-700 mx-auto max-w-xs">
                 <li>MODULE 1 — Compréhension et Analyse</li>
                 <li>MODULE 2 — Prévention et Désamorçage</li>
                 <li>MODULE 3 — Action et Sécurité Tactique</li>
@@ -98,12 +98,12 @@ function App() {
             </div>
 
             {/* Formation 2: Bien-être au travail */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center">
-              <div className="bg-gris-perle p-4 rounded-full mb-6">
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+              <div className="bg-gris-perle p-4 rounded-full mb-6 mx-auto">
                 <Heart size={48} className="text-vert-eau" />
               </div>
               <h3 className="text-2xl font-extrabold mb-4 text-bleu-marine">Bien-être au travail (3h)</h3>
-              <ul className="list-disc list-inside text-left space-y-2 text-gray-700">
+              <ul className="list-disc list-inside text-left space-y-2 text-gray-700 mx-auto max-w-xs">
                 <li>Identifier les sources de stress</li>
                 <li>Équilibre vie pro/vie perso</li>
                 <li>Ergonomie et environnement de travail</li>
@@ -112,12 +112,12 @@ function App() {
             </div>
 
             {/* Formation 3: Gestion du handicap */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center">
-              <div className="bg-gris-perle p-4 rounded-full mb-6">
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+              <div className="bg-gris-perle p-4 rounded-full mb-6 mx-auto">
                 <Accessibility size={48} className="text-bleu-marine" />
               </div>
               <h3 className="text-2xl font-extrabold mb-4 text-bleu-marine">Gestion du handicap (6h, possibilité 3h)</h3>
-              <ul className="list-disc list-inside text-left space-y-2 text-gray-700">
+              <ul className="list-disc list-inside text-left space-y-2 text-gray-700 mx-auto max-w-xs">
                 <li>Module 1 - Comprendre le handicap autrement</li>
                 <li>Module 2 - Cadre et repères institutionnels</li>
                 <li>Module 3 - Adapter l'accompagnement au quotidien</li>

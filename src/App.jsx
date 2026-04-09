@@ -12,40 +12,42 @@ function App() {
   return (
     <div className="font-sans antialiased text-gray-800">
       {/* Header */}
-      <header className="bg-bleu-marine text-white py-4 shadow-md fixed w-full z-10">
+      <header className="bg-bleu-marine text-white py-4 shadow-md fixed w-full z-50">
         <nav className="container mx-auto flex justify-between items-center min-w-0">
           <div className="flex items-center flex-shrink-0">
             <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-8 md:h-10 mr-4" />
             <div className="text-base sm:text-xl md:text-2xl font-bold min-w-0">Horizon Prévention</div>
           </div>
-          <div className="hidden md:flex items-center space-x-6">
-            <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
-              <Phone size={18} />
-              <span>07 43 35 84 41</span>
-            </a>
-            <a href="mailto:contact@horizon-prevention.fr" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
-              <Mail size={18} />
-              <span>contact@horizon-prevention.fr</span>
-            </a>
+          <div className="hidden xl:flex items-center space-x-6">
+            <div className="flex items-center space-x-6">
+              <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
+                <Phone size={18} />
+                <span>07 43 35 84 41</span>
+              </a>
+              <a href="mailto:contact@horizon-prevention.fr" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
+                <Mail size={18} />
+                <span>contact@horizon-prevention.fr</span>
+              </a>
+            </div>
+            <ul className="flex space-x-6">
+              <li><Link to="hero" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Accueil</Link></li>
+              <li><Link to="problemes" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Problèmes</Link></li>
+              <li><Link to="solutions" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Solutions</Link></li>
+              <li><Link to="benefices" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Bénéfices</Link></li>
+              <li><Link to="formations" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Formations</Link></li>
+              <li><Link to="domaines-intervention" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Domaines</Link></li>
+              <li><Link to="about" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">À propos</Link></li>
+            </ul>
           </div>
-          <div className="md:hidden">
+          <div className="xl:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-          <ul className="hidden md:flex space-x-6">
-            <li><Link to="hero" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Accueil</Link></li>
-            <li><Link to="problemes" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Problèmes</Link></li>
-            <li><Link to="solutions" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Solutions</Link></li>
-            <li><Link to="benefices" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Bénéfices</Link></li>
-            <li><Link to="formations" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Formations</Link></li>
-            <li><Link to="domaines-intervention" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">Domaines</Link></li>
-            <li><Link to="about" smooth={true} duration={500} className="cursor-pointer hover:text-vert-eau transition-colors">À propos</Link></li>
-          </ul>
         </nav>
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-bleu-marine absolute top-[72px] left-0 w-full py-4 shadow-lg">
+          <div className="xl:hidden bg-bleu-marine absolute top-full left-0 w-full py-4 shadow-lg border-t border-white/10">
             <ul className="flex flex-col items-center space-y-4">
               <li><Link to="hero" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Accueil</Link></li>
               <li><Link to="problemes" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Problèmes</Link></li>

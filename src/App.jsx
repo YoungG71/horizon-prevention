@@ -10,13 +10,13 @@ function App() {
   };
 
   return (
-    <div className="font-sans antialiased text-gray-800">
+    <div className="font-sans antialiased text-gray-800 overflow-x-hidden">
       {/* Header */}
       <header className="bg-bleu-marine text-white py-4 shadow-md fixed w-full z-50">
-        <nav className="container mx-auto flex justify-between items-center min-w-0">
-          <div className="flex items-center flex-shrink-0">
-            <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-8 md:h-10 mr-4" />
-            <div className="text-base sm:text-xl md:text-2xl font-bold min-w-0">Horizon Prévention</div>
+        <nav className="container mx-auto px-4 flex justify-between items-center w-full">
+          <div className="flex items-center min-w-0 mr-2">
+            <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-8 md:h-10 mr-2 sm:mr-4 flex-shrink-0" />
+            <div className="text-sm sm:text-xl md:text-2xl font-bold truncate">Horizon Prévention</div>
           </div>
           <div className="hidden xl:flex items-center space-x-6">
             <div className="flex items-center space-x-6">
@@ -77,21 +77,21 @@ function App() {
       <section id="hero" className="relative bg-gradient-to-r from-bleu-marine to-vert-eau text-white min-h-screen flex items-center justify-center text-center py-20 sm:py-16 pt-[64px] md:pt-20">
         <div className="container mx-auto px-4 z-10">
           <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-32 md:h-40 w-auto mx-auto mb-6 object-contain animate-fadeIn" />
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 animate-fadeIn">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 animate-fadeIn">
             Sécurisez vos équipes, valorisez votre accompagnement.
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Horizon Prévention est votre partenaire expert en formation professionnelle, dédié à l'amélioration du climat social et du bien-être en entreprise, notamment dans le secteur médico-social et les ESSMS.
           </p>
-          <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             Nous formons les professionnels des établissements éducatifs et du secteur du handicap à gérer les situations complexes avec sérénité et compétence.
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-            <a href="mailto:contact@horizon-prevention.fr" className="bg-vert-eau text-bleu-marine font-bold py-3 px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-lg">
+          <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 w-full">
+            <a href="mailto:contact@horizon-prevention.fr" className="w-full md:w-auto text-center bg-vert-eau text-bleu-marine font-bold py-3 px-6 sm:px-8 rounded-full hover:bg-opacity-90 active:scale-95 transition-transform duration-100 cursor-pointer text-base sm:text-lg">
               Demander un devis personnalisé
             </a>
-            <a href="/horizon-prevention.pdf" target="_blank" rel="noopener noreferrer" className="bg-bleu-marine text-white border border-white font-bold py-3 px-8 rounded-full hover:bg-vert-eau hover:text-bleu-marine active:scale-95 transition-transform duration-100 cursor-pointer text-lg flex items-center justify-center space-x-2">
-              <FileText size={20} />
+            <a href="/horizon-prevention.pdf" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto text-center bg-bleu-marine text-white border border-white font-bold py-3 px-6 sm:px-8 rounded-full hover:bg-vert-eau hover:text-bleu-marine active:scale-95 transition-transform duration-100 cursor-pointer text-base sm:text-lg flex items-center justify-center space-x-2">
+              <FileText size={20} className="flex-shrink-0" />
               <span>Découvrir nos formations (PDF)</span>
             </a>
           </div>

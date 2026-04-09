@@ -12,11 +12,11 @@ function App() {
   return (
     <div className="font-sans antialiased text-gray-800">
       {/* Header */}
-      <header className="bg-bleu-marine text-white p-4 shadow-md fixed w-full z-10">
-        <nav className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center">
-            <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-10 mr-4" />
-            <div className="text-2xl font-bold">Horizon Prévention</div>
+      <header className="bg-bleu-marine text-white py-4 shadow-md fixed w-full z-10">
+        <nav className="container mx-auto flex justify-between items-center min-w-0">
+          <div className="flex items-center flex-shrink-0">
+            <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-8 md:h-10 mr-4" />
+            <div className="text-base sm:text-xl md:text-2xl font-bold min-w-0">Horizon Prévention</div>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
@@ -45,7 +45,7 @@ function App() {
         </nav>
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-bleu-marine absolute top-16 left-0 w-full py-4 shadow-lg">
+          <div className="md:hidden bg-bleu-marine absolute top-[72px] left-0 w-full py-4 shadow-lg">
             <ul className="flex flex-col items-center space-y-4">
               <li><Link to="hero" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Accueil</Link></li>
               <li><Link to="problemes" smooth={true} duration={500} onClick={toggleMenu} className="cursor-pointer hover:text-vert-eau transition-colors">Problèmes</Link></li>
@@ -72,9 +72,9 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-r from-bleu-marine to-vert-eau text-white h-screen flex items-center justify-center text-center py-20">
+      <section id="hero" className="relative bg-gradient-to-r from-bleu-marine to-vert-eau text-white min-h-screen flex items-center justify-center text-center py-20 sm:py-16 pt-[64px] md:pt-20">
         <div className="container mx-auto px-4 z-10">
-          <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-40 w-auto mx-auto mb-6 object-contain animate-fadeIn" />
+          <img src="/Logo.png" alt="Logo Horizon Prévention" className="h-32 md:h-40 w-auto mx-auto mb-6 object-contain animate-fadeIn" />
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 animate-fadeIn">
             Sécurisez vos équipes, valorisez votre accompagnement.
           </h1>
@@ -255,14 +255,14 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Carte 1: Foyer Éducatif */}
             <div className="bg-white p-8 rounded-lg shadow-xl text-center border-b-4 border-vert-eau">
-              <img src="/foyer.jpg" alt="Établissements Éducatifs" className="rounded-3xl shadow-xl mb-6 w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+              <img src="/foyer.jpg" alt="Établissements Éducatifs" className="rounded-3xl shadow-xl mb-6 w-full h-48 sm:h-64 object-cover hover:scale-105 transition-transform duration-300" />
               <h3 className="text-2xl font-bold mb-4 text-bleu-marine">Établissements Éducatifs</h3>
               <p className="text-lg">Accompagnement des équipes en MECS et foyers pour une gestion sereine du quotidien.</p>
             </div>
 
             {/* Carte 2: Handicap */}
             <div className="bg-white p-8 rounded-lg shadow-xl text-center border-b-4 border-vert-eau">
-              <img src="/handicap.jpg" alt="Illustration du Secteur du Handicap" className="rounded-3xl shadow-xl mb-6 w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+              <img src="/handicap.jpg" alt="Illustration du Secteur du Handicap" className="rounded-3xl shadow-xl mb-6 w-full h-48 sm:h-64 object-cover hover:scale-105 transition-transform duration-300" />
               <h3 className="text-2xl font-bold mb-4 text-bleu-marine">Secteur du Handicap</h3>
               <p className="text-lg">Expertise en inclusion et aménagement pour valoriser chaque profil.</p>
             </div>
@@ -294,7 +294,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-bleu-marine text-white p-8 text-center">
         <div className="container mx-auto">
-          <div className="flex justify-center items-center space-x-6 mb-4">
+          <div className="flex flex-col space-y-2 sm:flex-row sm:justify-center sm:items-center sm:space-x-6 mb-4">
             <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
               <Phone size={18} />
               <span>07 43 35 84 41</span>
@@ -306,7 +306,7 @@ function App() {
           </div>
           <p className="mb-4">&copy; {new Date().getFullYear()} Horizon Prévention. Tous droits réservés.</p>
           <p className="mb-4 text-sm">Intervention dans toute la région Bourgogne-Franche-Comté (71, 21, 39, 25, 58, 89, 70, 90).</p>
-          <div className="flex justify-center space-x-6">
+          <div className="flex flex-col space-y-2 sm:flex-row sm:justify-center sm:space-x-6">
             <a href="#" className="hover:text-vert-eau transition-colors"><i className="fab fa-linkedin-in text-xl"></i></a>
             <a href="#" className="hover:text-vert-eau transition-colors"><i className="fab fa-twitter text-xl"></i></a>
             <a href="#" className="hover:text-vert-eau transition-colors"><i className="fab fa-facebook-f text-xl"></i></a>

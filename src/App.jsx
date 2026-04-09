@@ -294,21 +294,21 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-bleu-marine text-white p-8 text-center">
-        <div className="container mx-auto">
-          <div className="flex flex-col space-y-2 sm:flex-row sm:justify-center sm:items-center sm:space-x-6 mb-4">
-            <a href="tel:0743358441" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
+      <footer className="bg-bleu-marine text-white p-8 flex flex-col items-center">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
+            <a href="tel:0743358441" className="flex items-center gap-2 hover:text-vert-eau transition-colors">
               <Phone size={18} />
               <span>07 43 35 84 41</span>
             </a>
-            <a href="mailto:contact@horizon-prevention.fr" className="flex items-center space-x-2 hover:text-vert-eau transition-colors">
+            <a href="mailto:contact@horizon-prevention.fr" className="flex items-center gap-2 hover:text-vert-eau transition-colors">
               <Mail size={18} />
               <span>contact@horizon-prevention.fr</span>
             </a>
           </div>
           <p className="mb-4">&copy; {new Date().getFullYear()} Horizon Prévention. Tous droits réservés.</p>
           <p className="mb-4 text-sm">Intervention dans toute la région Bourgogne-Franche-Comté (71, 21, 39, 25, 58, 89, 70, 90).</p>
-          <div className="flex flex-col space-y-2 sm:flex-row sm:justify-center sm:space-x-6">
+          <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-6 justify-center">
             <a href="#" className="hover:text-vert-eau transition-colors"><i className="fab fa-linkedin-in text-xl"></i></a>
             <a href="#" className="hover:text-vert-eau transition-colors"><i className="fab fa-twitter text-xl"></i></a>
             <a href="#" className="hover:text-vert-eau transition-colors"><i className="fab fa-facebook-f text-xl"></i></a>
